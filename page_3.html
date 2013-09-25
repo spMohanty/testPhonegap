@@ -9,18 +9,37 @@
 <title>Page 3</title>
 
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
-<link rel="stylesheet" href="dialog.css" type="text/css" />
 <style text="text/css">
   body { background-color:#ffffff; }
-    span.text4586Font1 { font-size:27px; font-family:"Arial", sans-serif; color:#ffffff;}
+    span.text10920Font1 { font-size:27px; font-family:"Century Gothic", sans-serif; color:#333333;}
+    span.text10920Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10921Font1 { font-size:21px; font-family:"Segoe UI", sans-serif; color:#ffffff;}
+    span.text10921Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10928Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10928Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10929Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10929Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10930Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10930Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10931Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
 </style>
 
 <!--[if lt IE 7]>
 <style text="text/css">
-    #image8998 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image8998 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape006_8997.png',sizingMethod='scale'); }
-    #image9217 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image9217 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape007_9216.png',sizingMethod='scale'); }
+    #image6023 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image6023 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/purpleblue.png',sizingMethod='scale'); }
+    #image12306 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image12306 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/volume.png',sizingMethod='scale'); }
+    #image11984 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image11984 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape001_11874.png',sizingMethod='scale'); }
+    #image11825 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image11825 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/question.png',sizingMethod='scale'); }
+    #image10923 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10923 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/image0031.png',sizingMethod='scale'); }
+    #image10925 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10925 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/1368302077948963858baby_girl_crying-256.png',sizingMethod='scale'); }
+    #image10927 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10927 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/13683021751423003088baby_girl_laughing-256-md.png',sizingMethod='scale'); }
 </style>
 <![endif]-->
 
@@ -30,13 +49,9 @@
 <script language = "JavaScript" src="trivantis-button.js"></script>
 <script language = "JavaScript" src="trivantis-image.js"></script>
 <script language = "JavaScript" src="trivantis-inline.js"></script>
-<script language = "JavaScript" src="trivantis-drag.js"></script>
-<script language = "JavaScript" src="trivantis-dialog.js"></script>
-<script language = "JavaScript" src="trivantis-strings.js"></script>
 <script language = "JavaScript">
 
 <!-- 
-trivWeb20Popups = true;
 if( !is.min )
   document.write( 'Your browser does not support dynamic html. Please download a current version of either <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a> or <a href="http://www.mozilla.com/en-US/firefox/">Mozilla Firefox </a> and try visiting our site again.  Thank You.<br /><br />' )
 
@@ -66,11 +81,8 @@ function ReFlow() {
     pageLayer.newX = left;
     pageLayer.newY = 0;
   }
-  Offset_qu4574()
 }
 
-
-VarQuestion_0007 = new Variable( 'VarQuestion_0007', '', 0, 0, null, null, 'quiz', false )
 
 onload = init
 if( is.webkit )
@@ -81,47 +93,68 @@ else
 function init() {
   findWH()
   if( is.min ){
-    setTimeout( "preload( 'images/scooby-doo.jpg','images/scooby-doo_2_.jpg','images/scooby-doo_3_.jpg','images/scooby-doo_4_.jpg','images/scooby-doo_5_.jpg','images/scooby-doo_6_.jpg','images/scooby-doo_7_.jpg','images/scooby-doo_8_.jpg','images/scooby-doo_9_.jpg','images/shape006_8997.png','images/shape007_9216.png','images/exit.png','images/exit-sel.png','images/home.png','images/home-sel.png','images/back.png','images/back-sel.png','images/next.png','images/next-sel.png','images/help.png','images/help-sel.png' )", 0 )
+    setTimeout( "preload( 'images/next.png','images/back.png','images/exit.png','images/exit-sel.png','images/help.png','images/help-sel.png','images/home.png','images/home-sel.png','images/back-sel.png','images/next-sel.png','images/purpleblue.png','images/1368302077948963858baby_girl_crying-256.png','images/13683021751423003088baby_girl_laughing-256-md.png','images/image0031.png','images/question.png','images/shape001_11874.png','images/volume.png','images/text10919.gif','images/text10932.gif' )", 0 )
     pageLayer = new ObjLayer( 'pageDIV' );
     ReFlow();
     pageLayer.show();
-    button10361.init()
-    button10357.init()
-    button10355.init()
-    button10353.init()
-    button10351.init()
-    image8998.init()
-    image9217.init()
-    qu4574.init()
-    text4586.init()
-    image4584.init()
-    image4587.init()
-    image4589.init()
-    image4591.init()
-    image4593.init()
-    image4595.init()
-    image4597.init()
-    image4599.init()
-    image4601.init()
-    button10361.activate()
-    button10357.activate()
-    button10355.activate()
-    button10353.activate()
-    button10351.activate()
-    image8998.activate()
-    image9217.activate()
-    qu4574.activate()
-    text4586.activate()
-    image4584.activate()
-    image4587.activate()
-    image4589.activate()
-    image4591.activate()
-    image4593.activate()
-    image4595.activate()
-    image4597.activate()
-    image4599.activate()
-    image4601.activate()
-    Init_qu4574()
+    button6020.init()
+    button6018.init()
+    button6016.init()
+    button6014.init()
+    button6012.init()
+    button6010.init()
+    button10933.init()
+    button10936.init()
+    button10939.init()
+    button10942.init()
+    image6023.init()
+    audio12708.init()
+    audio12500.init()
+    audio12498.init()
+    image12306.init()
+    image11984.init()
+    image11825.init()
+    text10919.init()
+    text10920.init()
+    text10921.init()
+    image10923.init()
+    image10925.init()
+    image10927.init()
+    text10928.init()
+    text10929.init()
+    text10930.init()
+    text10931.init()
+    text10932.init()
+    button6020.activate()
+    button6018.activate()
+    button6016.activate()
+    button6014.activate()
+    button6012.activate()
+    button6010.activate()
+    button10933.activate()
+    button10936.activate()
+    button10939.activate()
+    button10942.activate()
+    image6023.activate()
+    audio12708.activate()
+    audio12500.activate()
+    audio12498.activate()
+    image12306.activate()
+    image11984.activate()
+    image11825.activate()
+    text10919.activate()
+    text10920.activate()
+    text10921.activate()
+    image10923.activate()
+    image10925.activate()
+    image10927.activate()
+    text10928.activate()
+    text10929.activate()
+    text10930.activate()
+    text10931.activate()
+    text10932.activate()
+    action10917(  );
+    action10918(  );
 
     if( location.hash )
     {
@@ -132,7 +165,6 @@ function init() {
         newHash = location.hash
       location.hash = newHash
     }
-    initDragMouseEvents()
     setTimeout( 'trivUpdateTOC( 1 )', 500 )
   }
 }
@@ -156,7 +188,7 @@ function checkLeavePage() {
     if( trivActFBCnt == 0 )
     {
         currFeedbackIdx++;
-        if( currFeedbackIdx > 0)
+        if( currFeedbackIdx > -1)
         {
             trivLeavePage();
           return;
@@ -172,8 +204,6 @@ function trivExitPage( newPage, bFeedback ) {
     else trivGoToPage = 'ObjLayerActionGoTo("' + newPage + '")'
     if( !hasProcessedExitActions ) {
         findWH()
-        if( !checkQuestions( bFeedback ))
-          return
         hasProcessedExitActions = true
         setTimeout( 'checkLeavePage()', 100)
     }
@@ -210,296 +240,443 @@ function trivUpdateEntry() {
 function trivResetEntry() {
 }
 
-function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
-  var onAfterFBAction = ( bNotLeavingPage ? (function(){trivActFBCnt--;}) : (function(){trivActFBCnt--;window.checkLeavePage();}) );
-  if( !bFeedback ) currFeedbackIdx = 1;
-
-  return 1
+function playerReady(obj){
+  	if(obj['id'] == 'swfaudio12708') { audio12708.setFlashPlayer(); audio12708.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12708') { audio12708.setFlashPlayer(); audio12708.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
+  	if(obj['id'] == 'swfaudio12500') { audio12500.setFlashPlayer(); audio12500.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12500') { audio12500.setFlashPlayer(); audio12500.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
+  	if(obj['id'] == 'swfaudio12498') { audio12498.setFlashPlayer(); audio12498.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12498') { audio12498.setFlashPlayer(); audio12498.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
 }
 
-function doImmFeedback( objId ) {
-  var onAfterFBAction = function(){trivActFBCnt--;};
-
-  if(objId=='qu4574') {
-    var ans_VarQuestion_0007 = VarQuestion_0007.getValue()
-    if(ans_VarQuestion_0007 != '~~~null~~~' && !qu4574.hasBeenProcessed) {
-      var naArr = ans_VarQuestion_0007.match(/-\(na\)/g) 
-      var naCount = naArr?naArr.length:0;
-      var arrAns = new Array
-      arrAns[0]='\u0031\u002D\u0031'
-      arrAns[1]='\u0032\u002D\u0032'
-      arrAns[2]='\u0033\u002D\u0033'
-      arrAns[3]='\u0034\u002D\u0034'
-      arrAns[4]='\u0035\u002D\u0035'
-      arrAns[5]='\u0036\u002D\u0036'
-      arrAns[6]='\u0037\u002D\u0037'
-      arrAns[7]='\u0038\u002D\u0038'
-      var answered = ans_VarQuestion_0007.match(/-/g);
-      if( arrAns.length - naCount < 8 ) return 0;
-      var offset=0
-      var wrong=false
-      for( var idx=0; idx<8 && !wrong; idx++ ) {
-        var split = arrAns[idx].split("|");
-        var choiceCorrect = false;
-        for( var idx2=0; idx2<split.length; idx2++ ) {
-          var offset = ans_VarQuestion_0007.indexOf( split[idx2] , offset )
-          if( offset >= 0 ) choiceCorrect = true;
-        }
-        if(!choiceCorrect)wrong=true; 
-      }
-      if( !wrong ) {
-    { //1 
-        trivActFBCnt++; action4574_7(onAfterFBAction);  return 0;
-  } //1
-
-  
-    }
-      if( wrong ) {
-    { //2 
-trivActFBCnt++; action4574_8(onAfterFBAction);return 0;  } //2 
-
-  
-    }
-  }
-  }
-  return 1
+function OnStateChange(obj){
+  	if(obj['id'] == 'swfaudio12708') { if( obj['newstate'] == 'PLAYING') audio12708.autoPlay = true; else audio12708.autoPlay = false; }
+  	if(obj['id'] == 'swfaudio12500') { if( obj['newstate'] == 'PLAYING') audio12500.autoPlay = true; else audio12500.autoPlay = false; }
+  	if(obj['id'] == 'swfaudio12498') { if( obj['newstate'] == 'PLAYING') audio12498.autoPlay = true; else audio12498.autoPlay = false; }
 }
 
-function action10362(fn){
-    trivAlert( '10361', 'Quiz', 'In case of any questions, please feel free to get in touch with us.\n\nYou may e-mail us at: info@convegenius.in\n\nor call us at: 0565-2425081', fn );
+function action10917(fn){
+    button6014.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10361onUp() {
-  action10362(function(){/*TRIVDLGCALLBACKS*/});
+function action10918(fn){
+    button6016.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action10358(fn){
+function action6021(fn){
+    alert( 'In case of any questions, please feel free to get in touch with us.\n\nYou may e-mail us at: info@convegenius.in\n\nor call us at: 0565-2425081' ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button6020onUp() {
+  action6021();
+}
+
+function action6019(fn){
+    trivExitPage('http://www.convegenius.in',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button6018onUp() {
+  action6019();
+}
+
+function action6017(fn){
     trivExitPage('page_4.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10357onUp() {
-  action10358();
+function button6016onUp() {
+  action6017();
 }
 
-function action10356(fn){
+function action6015(fn){
     trivExitPage('page_2.html',false);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10355onUp() {
-  action10356();
+function button6014onUp() {
+  action6015();
 }
 
-function action10354(fn){
+function action6013(fn){
     trivExitPage('home_page.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10353onUp() {
-  action10354();
+function button6012onUp() {
+  action6013();
 }
 
-function action10352(fn){
-    {cleanupTitle('quiz'); trivExitPage('ObjLayerActionExit()',false);} 
+function action6011(fn){
+    {cleanupTitle('steel'); trivExitPage('ObjLayerActionExit()',false);} 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10351onUp() {
-  action10352();
+function button6010onUp() {
+  action6011();
 }
 
-function Offset_qu4574() {
-    if( pageLayer ) dragMgr.offsetDrag( pageLayer.x, pageLayer.y )
+function action10934(fn){
+    image10925.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function Init_qu4574(bReset) {
-  if(bReset) dragMgr.reset()
-  Offset_qu4574()
-dragMgr.bSnapToCenter = true
-  var newVal = "," + VarQuestion_0007.getValue() + ","
-  for( var idx = 0; idx < dragMgr.arrDragItems.length; idx++ )
-  {
-    var check = "," + dragMgr.arrDragItems[idx].lyr.dragId + "-"
-    var offset = newVal.indexOf( check )
-    if( offset >= 0 )
-    {
-      var rightSel = newVal.substring( offset + check.length )
-      var comma    = rightSel.indexOf( ',' )
-      var rightId = rightSel.substring( 0, comma )
-      dragMgr.setDropById( dragMgr.arrDragItems[idx].lyr.dragId, rightId, Update_qu4574 )
-    }
-  }
+function action12570(fn){
+    audio12500.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function Update_qu4574() {
-  var newVal = ''
-  for( var idx = 0; idx < 8; idx++ )
-  {
-    var test
-    if( idx == 0 ) test = image4587
-    else if( idx == 1 ) test = image4589
-    else if( idx == 2 ) test = image4591
-    else if( idx == 3 ) test = image4593
-    else if( idx == 4 ) test = image4595
-    else if( idx == 5 ) test = image4597
-    else if( idx == 6 ) test = image4599
-    else if( idx == 7 ) test = image4601
-    if( test.dropObj ) newVal += test.dragId + "-" + test.dropObj.dropId + ","
-    else newVal += test.dragId + "-" + '(na)' + ","
-  }
-  newVal = newVal.substring( 0, newVal.length-1 )
-  VarQuestion_0007.set( newVal )
-  qu4574.hasBeenProcessed=false;
-  doImmFeedback('qu4574');
+function action12004(fn){
+    image11984.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action4574_7(fn){
-    trivAlert( 'action4574_7', 'Quiz', 'Correct!', fn );
+function action10935(fn){
+    image10927.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action4574_8(fn){
-    trivAlert( 'action4574_8', 'Quiz', 'Incorrect.\nTry Again.', fn );
+function button10933onUp() {
+  action10934();action12570();action12004();action10935();
+}
+
+function action10937(fn){
+    image10925.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action12563(fn){
+    audio12500.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action11997(fn){
+    image11984.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action10938(fn){
+    image10927.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button10936onUp() {
+  action10937();action12563();action11997();action10938();
+}
+
+function action10940(fn){
+    image10927.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action12556(fn){
+    audio12498.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action12018(fn){
+    image11984.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action10941(fn){
+    image10925.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button10939onUp() {
+  action10940();action12556();action12018();action10941();
+}
+
+function action10943(fn){
+    image10925.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action12577(fn){
+    audio12500.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action12011(fn){
+    image11984.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action10944(fn){
+    image10927.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button10942onUp() {
+  action10943();action12577();action12011();action10944();
+}
+
+function action12726(fn){
+    audio12708.actionTogglePlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function image12306onUp() {
+  action12726();
 }
 
 if( is.min ){
-button10361 = new ObjButton('button10361','help',884,24,48,45,1,28,'div')
-button10361.setImages('images/help.png','images/help-sel.png','images/help-sel.png')
-button10361.onUp = button10361onUp
-button10361.hasOnUp = true
-button10361.capture=4
-button10361.build()
+button6020 = new ObjButton('button6020',null,884,24,48,45,1,38,'div')
+button6020.setImages('images/help.png','images/help-sel.png','images/help-sel.png')
+button6020.onUp = button6020onUp
+button6020.hasOnUp = true
+button6020.capture=4
+button6020.build()
 
-button10357 = new ObjButton('button10357','next',536,610,62,40,1,29,'div')
-button10357.setImages('images/next.png','images/next-sel.png','images/next-sel.png')
-button10357.onUp = button10357onUp
-button10357.hasOnUp = true
-button10357.capture=4
-button10357.build()
+button6018 = new ObjButton('button6018',null,7,6,249,44,1,39,'div')
+button6018.setImages('transbtn.gif',null,null,'images/')
+button6018.onUp = button6018onUp
+button6018.hasOnUp = true
+button6018.capture=4
+button6018.build()
 
-button10355 = new ObjButton('button10355','back',448,610,62,40,1,30,'div')
-button10355.setImages('images/back.png','images/back-sel.png','images/back-sel.png')
-button10355.onUp = button10355onUp
-button10355.hasOnUp = true
-button10355.capture=4
-button10355.build()
+button6016 = new ObjButton('button6016',null,536,610,62,40,0,40,'div')
+button6016.setImages('images/next.png','images/next-sel.png','images/next-sel.png')
+button6016.onUp = button6016onUp
+button6016.hasOnUp = true
+button6016.capture=4
+button6016.build()
 
-button10353 = new ObjButton('button10353','home',824,24,50,46,1,31,'div')
-button10353.setImages('images/home.png','images/home-sel.png','images/home-sel.png')
-button10353.onUp = button10353onUp
-button10353.hasOnUp = true
-button10353.capture=4
-button10353.build()
+button6014 = new ObjButton('button6014',null,448,610,62,40,0,41,'div')
+button6014.setImages('images/back.png','images/back-sel.png','images/back-sel.png')
+button6014.onUp = button6014onUp
+button6014.hasOnUp = true
+button6014.capture=4
+button6014.build()
 
-button10351 = new ObjButton('button10351','exit',940,24,53,45,1,32,'div')
-button10351.setImages('images/exit.png',null,'images/exit-sel.png')
-button10351.onUp = button10351onUp
-button10351.hasOnUp = true
-button10351.capture=4
-button10351.build()
+button6012 = new ObjButton('button6012',null,824,24,50,46,1,42,'div')
+button6012.setImages('images/home.png','images/home-sel.png','images/home-sel.png')
+button6012.onUp = button6012onUp
+button6012.hasOnUp = true
+button6012.capture=4
+button6012.build()
 
-image8998 = new ObjImage('image8998','images/shape006_8997.png','Line',515,95,4,468,1,5,'div')
-image8998.build()
+button6010 = new ObjButton('button6010',null,940,24,53,45,1,43,'div')
+button6010.setImages('images/exit.png',null,'images/exit-sel.png')
+button6010.onUp = button6010onUp
+button6010.hasOnUp = true
+button6010.capture=4
+button6010.build()
 
-image9217 = new ObjImage('image9217','images/shape007_9216.png','Rectangle',46,51,916,570,1,6,'div')
-image9217.build()
+button10933 = new ObjButton('button10933',null,778,400,96,100,1,44,'div')
+button10933.setImages('transbtn.gif',null,null,'images/')
+button10933.onUp = button10933onUp
+button10933.hasOnUp = true
+button10933.capture=4
+button10933.build()
 
-qu4574 = new ObjInline('qu4574',null,49,16,984,641,1,0)
-qu4574.isGrp = true
-qu4574.addChild('text4586')
-qu4574.addChild('image4584')
-qu4574.addChild('image4587')
-qu4574.addChild('image4589')
-qu4574.addChild('image4591')
-qu4574.addChild('image4593')
-qu4574.addChild('image4595')
-qu4574.addChild('image4597')
-qu4574.addChild('image4599')
-qu4574.addChild('image4601')
-qu4574.ansVar=VarQuestion_0007;
-qu4574.build()
+button10936 = new ObjButton('button10936',null,774,280,100,100,1,45,'div')
+button10936.setImages('transbtn.gif',null,null,'images/')
+button10936.onUp = button10936onUp
+button10936.hasOnUp = true
+button10936.capture=4
+button10936.build()
 
-dragMgr.addDrop( 544, 83, 202, 127, '1', Update_qu4574 )
-dragMgr.addDrop( 751, 83, 189, 127, '2', Update_qu4574 )
-dragMgr.addDrop( 544, 208, 202, 124, '3', Update_qu4574 )
-dragMgr.addDrop( 751, 208, 189, 122, '4', Update_qu4574 )
-dragMgr.addDrop( 544, 334, 202, 122, '5', Update_qu4574 )
-dragMgr.addDrop( 751, 332, 189, 124, '6', Update_qu4574 )
-dragMgr.addDrop( 544, 458, 202, 122, '7', Update_qu4574 )
-dragMgr.addDrop( 751, 458, 189, 122, '8', Update_qu4574 )
+button10939 = new ObjButton('button10939',null,778,160,96,100,1,46,'div')
+button10939.setImages('transbtn.gif',null,null,'images/')
+button10939.onUp = button10939onUp
+button10939.hasOnUp = true
+button10939.capture=4
+button10939.build()
 
-text4586 = new ObjInline('text4586',null,49,16,357,33,1,7,null,'div')
-text4586.build()
+button10942 = new ObjButton('button10942',null,778,520,96,100,1,47,'div')
+button10942.setImages('transbtn.gif',null,null,'images/')
+button10942.onUp = button10942onUp
+button10942.hasOnUp = true
+button10942.capture=4
+button10942.build()
 
-image4584 = new ObjImage('image4584','images/scooby-doo.jpg','Question image',544,83,400,500,1,8,'div')
-image4584.build()
+image6023 = new ObjImage('image6023','images/purpleblue.png',null,0,0,1009,86,1,10,'div')
+image6023.build()
 
-image4587 = new ObjImage('image4587','images/scooby-doo_2_.jpg','Choice 1 image',73,204,200,125,1,9,'div')
-dragMgr.addDrag( image4587, '1', Update_qu4574 )
-image4587.isChoice = true
-image4587.build()
+audio12708 = new ObjInline('audio12708',null,354,321,1,1,1,11,0,'div');
+audio12708.iType='flashvid';
+audio12708
+if (is.useHTML5Video()) {
+audio12708.addParm( "<audio src='media/audio.mp3' width='1px' height='1px' id='html5audio12708' name='html5audio12708' class=''></audio>")
+}else{
+if (is.Mac) {
+audio12708.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12708' name='swfaudio12708'>" )
+}
+else{
+audio12708.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12708' id='swfaudio12708'>" )
+}
+audio12708.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12708.addParm( "<param name='wmode' value='transparent'>" )
+audio12708.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12708.addParm( "<param name='FlashVars' value='file=media/audio.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+if (!is.Mac) {
+audio12708.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12708' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/audio.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12708.addParm( "</embed> </object>" )
+}
+else {
+audio12708.addParm( "</object>" )
+}
+}
+audio12708.build()
 
-image4589 = new ObjImage('image4589','images/scooby-doo_3_.jpg','Choice 2 image',287,474,200,125,1,10,'div')
-dragMgr.addDrag( image4589, '2', Update_qu4574 )
-image4589.isChoice = true
-image4589.build()
+audio12500 = new ObjInline('audio12500',null,372,545,1,1,1,12,0,'div');
+audio12500.iType='flashvid';
+audio12500
+if (is.useHTML5Video()) {
+audio12500.addParm( "<audio src='media/wrong_answer.mp3' width='1px' height='1px' id='html5audio12500' name='html5audio12500' class=''></audio>")
+}else{
+if (is.Mac) {
+audio12500.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12500' name='swfaudio12500'>" )
+}
+else{
+audio12500.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12500' id='swfaudio12500'>" )
+}
+audio12500.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12500.addParm( "<param name='wmode' value='transparent'>" )
+audio12500.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12500.addParm( "<param name='FlashVars' value='file=media/wrong_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+if (!is.Mac) {
+audio12500.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12500' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/wrong_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12500.addParm( "</embed> </object>" )
+}
+else {
+audio12500.addParm( "</object>" )
+}
+}
+audio12500.build()
 
-image4591 = new ObjImage('image4591','images/scooby-doo_4_.jpg','Choice 3 image',288,206,200,125,1,11,'div')
-dragMgr.addDrag( image4591, '3', Update_qu4574 )
-image4591.isChoice = true
-image4591.build()
+audio12498 = new ObjInline('audio12498',null,377,437,1,1,1,13,0,'div');
+audio12498.iType='flashvid';
+audio12498
+if (is.useHTML5Video()) {
+audio12498.addParm( "<audio src='media/right_answer.mp3' width='1px' height='1px' id='html5audio12498' name='html5audio12498' class=''></audio>")
+}else{
+if (is.Mac) {
+audio12498.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12498' name='swfaudio12498'>" )
+}
+else{
+audio12498.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12498' id='swfaudio12498'>" )
+}
+audio12498.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12498.addParm( "<param name='wmode' value='transparent'>" )
+audio12498.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12498.addParm( "<param name='FlashVars' value='file=media/right_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+if (!is.Mac) {
+audio12498.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12498' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/right_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12498.addParm( "</embed> </object>" )
+}
+else {
+audio12498.addParm( "</object>" )
+}
+}
+audio12498.build()
 
-image4593 = new ObjImage('image4593','images/scooby-doo_5_.jpg','Choice 4 image',73,71,200,125,1,12,'div')
-dragMgr.addDrag( image4593, '4', Update_qu4574 )
-image4593.isChoice = true
-image4593.build()
+image12306 = new ObjImage('image12306','images/volume.png',null,936,100,50,50,1,14,'div')
+image12306.onUp = image12306onUp
+image12306.hasOnUp = true
+image12306.capture=4
+image12306.build()
 
-image4595 = new ObjImage('image4595','images/scooby-doo_6_.jpg','Choice 5 image',74,473,200,125,1,13,'div')
-dragMgr.addDrag( image4595, '5', Update_qu4574 )
-image4595.isChoice = true
-image4595.build()
+image11984 = new ObjImage('image11984','images/shape001_11874.png',null,763,149,120,120,0,15,'div')
+image11984.build()
 
-image4597 = new ObjImage('image4597','images/scooby-doo_7_.jpg','Choice 6 image',75,339,200,125,1,14,'div')
-dragMgr.addDrag( image4597, '6', Update_qu4574 )
-image4597.isChoice = true
-image4597.build()
+image11825 = new ObjImage('image11825','images/question.png',null,38,108,40,40,1,16,'div')
+image11825.build()
 
-image4599 = new ObjImage('image4599','images/scooby-doo_8_.jpg','Choice 7 image',288,340,200,125,1,15,'div')
-dragMgr.addDrag( image4599, '7', Update_qu4574 )
-image4599.isChoice = true
-image4599.build()
+text10919 = new ObjImage('text10919','images/text10919.gif',null,92,104,646,53,1,17,'div')
+text10919.build()
 
-image4601 = new ObjImage('image4601','images/scooby-doo_9_.jpg','Choice 8 image',290,71,200,125,1,16,'div')
-dragMgr.addDrag( image4601, '8', Update_qu4574 )
-image4601.isChoice = true
-image4601.build()
+text10920 = new ObjInline('text10920',null,265,8,522,36,1,18,null,'div')
+text10920.build()
 
-var trivQuestionArray=[qu4574];
+text10921 = new ObjInline('text10921',null,64,50,725,37,1,19,null,'div')
+text10921.build()
+
+image10923 = new ObjImage('image10923','images/image0031.png',null,100,170,242,224,1,20,'div')
+image10923.build()
+
+image10925 = new ObjImage('image10925','images/1368302077948963858baby_girl_crying-256.png',null,392,218,290,290,0,21,'div')
+image10925.build()
+
+image10927 = new ObjImage('image10927','images/13683021751423003088baby_girl_laughing-256-md.png',null,388,208,300,300,0,22,'div')
+image10927.build()
+
+text10928 = new ObjInline('text10928',null,774,400,100,100,1,23,'#674ea7','div')
+text10928.build()
+
+text10929 = new ObjInline('text10929',null,774,160,100,100,1,24,'#674ea7','div')
+text10929.build()
+
+text10930 = new ObjInline('text10930',null,774,520,100,100,1,25,'#674ea7','div')
+text10930.build()
+
+text10931 = new ObjInline('text10931',null,774,280,100,100,1,26,'#674ea7','div')
+text10931.build()
+
+text10932 = new ObjImage('text10932','images/text10932.gif',null,98,400,196,72,1,27,'div')
+text10932.build()
+
 
 
 writeStyleSheets(
-    button10361.css+
-    button10357.css+
-    button10355.css+
-    button10353.css+
-    button10351.css+
-    image8998.css+
-    image9217.css+
-    qu4574.css+
-    text4586.css+
-    image4584.css+
-    image4587.css+
-    image4589.css+
-    image4591.css+
-    image4593.css+
-    image4595.css+
-    image4597.css+
-    image4599.css+
-    image4601.css
+    button6020.css+
+    button6018.css+
+    button6016.css+
+    button6014.css+
+    button6012.css+
+    button6010.css+
+    button10933.css+
+    button10936.css+
+    button10939.css+
+    button10942.css+
+    image6023.css+
+    audio12708.css+
+    audio12500.css+
+    audio12498.css+
+    image12306.css+
+    image11984.css+
+    image11825.css+
+    text10919.css+
+    text10920.css+
+    text10921.css+
+    image10923.css+
+    image10925.css+
+    image10927.css+
+    text10928.css+
+    text10929.css+
+    text10930.css+
+    text10931.css+
+    text10932.css
     )
 }
 // -->
@@ -514,7 +691,7 @@ if( is.min ){
     findWH()
     var left = (winW > 1009) ? (winW-1009)/2 : 0
     document.write('<style text="text/css">#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:1009px; height:662px; ' )
-    document.write('layer-background-image: url(images/image_2003_8910.jpg); background-image: url(images/image_2003_8910.jpg); background-repeat:no-repeat;' )
+    document.write('layer-background-image: url(images/template_copy.jpg); background-image: url(images/template_copy.jpg); background-repeat:no-repeat;' )
     document.write('} ></style>')
     document.write('<DIV id=\"pageDIV\">')
 }
@@ -522,44 +699,126 @@ if( is.min ){
 
 <script language="JavaScript">
 if( is.min ){
-    document.write(button10361.div)
-    document.write(button10357.div)
-    document.write(button10355.div)
-    document.write(button10353.div)
-    document.write(button10351.div)
-    document.write(image8998.div)
-    document.write(image9217.div)
+    document.write(button6020.div)
+    document.write(button6018.div)
+    document.write(button6016.div)
+    document.write(button6014.div)
+    document.write(button6012.div)
+    document.write(button6010.div)
+    document.write(button10933.div)
+    document.write(button10936.div)
+    document.write(button10939.div)
+    document.write(button10942.div)
+    document.write(image6023.div)
+    document.write(audio12708.div)
+    document.write(audio12500.div)
+    document.write(audio12498.div)
+    document.write(image12306.div)
+    document.write(image11984.div)
+    document.write(image11825.div)
+    document.write(text10919.div)
 }
 </script>
 
-<fieldset style="border:0;">
-<legend style="font-size:0px; position:absolute; top:-100px;"> Solve the Picture puzzle</legend>
-<div id="qu4574"><a name="qu4574anc"></a>
+<div id="text10920"><a name="text10920anc"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:right;" >
+<span class="text10920Font1"  >Starting Alphabet (Basic)</span ><span class="text10920Font2" style="background-color:transparent" >
+</span ></p >
 </div>
-<div id="text4586"><a name="text4586anc"></a>
+
+<div id="text10921"><a name="text10921anc"></a>
 <p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text4586Font1"  >Solve the Picture puzzle
+<span class="text10921Font1"  >Learning Activity</span ><span class="text10921Font2" style="background-color:transparent" >
 </span ></p >
 </div>
 
 <script language="JavaScript">
 if( is.min ){
-    document.write(image4584.div)
-    document.write(image4587.div)
-    document.write(image4589.div)
-    document.write(image4591.div)
-    document.write(image4593.div)
-    document.write(image4595.div)
-    document.write(image4597.div)
-    document.write(image4599.div)
-    document.write(image4601.div)
+    document.write(image10923.div)
+    document.write(image10925.div)
+    document.write(image10927.div)
 }
 </script>
 
-</fieldset>
+<div id="text10928"><a name="text10928anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10928ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10928Font1"  >Z</span ><span class="text10928Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10928ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10929"><a name="text10929anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10929ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10929Font1"  >G</span ><span class="text10929Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10929ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10930"><a name="text10930anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10930ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10930Font1"  >R</span ><span class="text10930Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10930ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10931"><a name="text10931anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10931ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10931Font1"  >J
+</span ></p >
+<!--split=text10931ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
 
 <script language="JavaScript">
 if( is.min ){
+    document.write(text10932.div)
     document.write("</DIV>")
 }
 </script>

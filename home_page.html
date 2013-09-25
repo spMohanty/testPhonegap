@@ -6,25 +6,22 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=1009" />
-<title>End Page</title>
+<title>Home Page</title>
 
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
 <style text="text/css">
   body { background-color:#ffffff; }
-    span.text8897Font1 { font-size:21px; font-family:"Ebrima"; color:#010101;}
-    span.text8898Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
-    span.text8898Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
-    span.text8899Font1 { font-size:27px; font-family:"Century Gothic", sans-serif; color:#333333;}
-    span.text8899Font2 { font-size:29px; font-family:"Ebrima"; color:#9900ff; font-weight:bold;}
-    span.text8899Font3 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text11671Font1 { font-size:64px; font-family:"Ebrima"; color:#000000;}
+    span.text5237Font1 { font-size:27px; font-family:"Century Gothic", sans-serif; color:#333333;}
+    span.text5240Font1 { font-size:21px; font-family:"Segoe UI", sans-serif; color:#ffffff;}
 </style>
 
 <!--[if lt IE 7]>
 <style text="text/css">
     #image6023 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
     #image6023 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/purpleblue.png',sizingMethod='scale'); }
-    #image11592 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image11592 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/make_dicision.png',sizingMethod='scale'); }
+    #image8763 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image8763 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/teacher-sitting-at-desk.png',sizingMethod='scale'); }
 </style>
 <![endif]-->
 
@@ -78,7 +75,7 @@ else
 function init() {
   findWH()
   if( is.min ){
-    setTimeout( "preload( 'images/next.png','images/back.png','images/exit.png','images/exit-sel.png','images/help.png','images/help-sel.png','images/home.png','images/home-sel.png','images/back-sel.png','images/next-sel.png','images/purpleblue.png','images/congrats.jpg','images/make_dicision.png' )", 0 )
+    setTimeout( "preload( 'images/next.png','images/back.png','images/exit.png','images/exit-sel.png','images/help.png','images/help-sel.png','images/home.png','images/home-sel.png','images/back-sel.png','images/next-sel.png','images/startoff.gif','images/startclk.gif','images/startrol.gif','images/purpleblue.png','images/teacher-sitting-at-desk.png' )", 0 )
     pageLayer = new ObjLayer( 'pageDIV' );
     ReFlow();
     pageLayer.show();
@@ -88,26 +85,24 @@ function init() {
     button6014.init()
     button6012.init()
     button6010.init()
+    button5241.init()
     image6023.init()
-    image11587.init()
-    image11592.init()
-    text8897.init()
-    text8898.init()
-    text8899.init()
+    text11671.init()
+    image8763.init()
+    text5237.init()
+    text5240.init()
     button6020.activate()
     button6018.activate()
     button6016.activate()
     button6014.activate()
     button6012.activate()
     button6010.activate()
+    button5241.activate()
     image6023.activate()
-    image11587.activate()
-    image11592.activate()
-    text8897.activate()
-    text8898.activate()
-    text8899.activate()
-    action8896(  );
-
+    text11671.activate()
+    image8763.activate()
+    text5237.activate()
+    text5240.activate()
     if( location.hash )
     {
       var newHash
@@ -175,10 +170,11 @@ function trivLeavePage() {
 }
 
 function trivPrevPage() {
-    trivExitPage( 'page_6.html', true )
+    trivExitPage( 'index.html', true )
 }
 
 function trivNextPage() {
+    trivExitPage( 'page_1.html', true )
 }
 
 function trivUpdateTOC( bRecurse ) {
@@ -189,12 +185,6 @@ function trivUpdateEntry() {
 }
 
 function trivResetEntry() {
-}
-
-function action8896(fn){
-    button6014.actionShow(); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action6021(fn){
@@ -217,8 +207,18 @@ function button6018onUp() {
   action6019();
 }
 
+function action6017(fn){
+    trivExitPage('page_1.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button6016onUp() {
+  action6017();
+}
+
 function action6015(fn){
-    trivExitPage('page_6.html',false);
+    trivExitPage('index.html',false);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -228,7 +228,7 @@ function button6014onUp() {
 }
 
 function action6013(fn){
-    trivExitPage('home_page.html',true);
+    ObjLayerActionGoTo('#top');
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -247,14 +247,14 @@ function button6010onUp() {
   action6011();
 }
 
-function action11666(fn){
-    trivExitPage('home_page.html',true);
+function action5242(fn){
+    trivExitPage('page_1.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function image11592onUp() {
-  action11666();
+function button5241onUp() {
+  action5242();
 }
 
 if( is.min ){
@@ -274,6 +274,9 @@ button6018.build()
 
 button6016 = new ObjButton('button6016',null,536,610,62,40,0,24,'div')
 button6016.setImages('images/next.png','images/next-sel.png','images/next-sel.png')
+button6016.onUp = button6016onUp
+button6016.hasOnUp = true
+button6016.capture=4
 button6016.build()
 
 button6014 = new ObjButton('button6014',null,448,610,62,40,0,25,'div')
@@ -297,26 +300,27 @@ button6010.hasOnUp = true
 button6010.capture=4
 button6010.build()
 
-image6023 = new ObjImage('image6023','images/purpleblue.png',null,0,0,1009,86,1,6,'div')
+button5241 = new ObjButton('button5241',null,640,417,165,88,1,28,'div')
+button5241.setImages('images/startoff.gif','images/startclk.gif','images/startrol.gif')
+button5241.onUp = button5241onUp
+button5241.hasOnUp = true
+button5241.capture=4
+button5241.build()
+
+image6023 = new ObjImage('image6023','images/purpleblue.png',null,0,0,1009,86,1,7,'div')
 image6023.build()
 
-image11587 = new ObjImage('image11587','images/congrats.jpg',null,362,209,70,73,1,7,'div')
-image11587.build()
+text11671 = new ObjInline('text11671',null,436,165,546,269,1,8,null,'div')
+text11671.build()
 
-image11592 = new ObjImage('image11592','images/make_dicision.png',null,487,338,76,77,1,8,'div')
-image11592.onUp = image11592onUp
-image11592.hasOnUp = true
-image11592.capture=4
-image11592.build()
+image8763 = new ObjImage('image8763','images/teacher-sitting-at-desk.png',null,103,138,326,412,1,9,'div')
+image8763.build()
 
-text8897 = new ObjInline('text8897',null,328,483,394,80,1,9,null,'div')
-text8897.build()
+text5237 = new ObjInline('text5237',null,265,8,522,36,1,10,null,'div')
+text5237.build()
 
-text8898 = new ObjInline('text8898',null,433,209,261,73,1,10,'#6653b0','div')
-text8898.build()
-
-text8899 = new ObjInline('text8899',null,265,8,522,36,1,11,null,'div')
-text8899.build()
+text5240 = new ObjInline('text5240',null,64,50,725,37,1,11,null,'div')
+text5240.build()
 
 
 
@@ -327,12 +331,12 @@ writeStyleSheets(
     button6014.css+
     button6012.css+
     button6010.css+
+    button5241.css+
     image6023.css+
-    image11587.css+
-    image11592.css+
-    text8897.css+
-    text8898.css+
-    text8899.css
+    text11671.css+
+    image8763.css+
+    text5237.css+
+    text5240.css
     )
 }
 // -->
@@ -347,6 +351,7 @@ if( is.min ){
     findWH()
     var left = (winW > 1009) ? (winW-1009)/2 : 0
     document.write('<style text="text/css">#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:1009px; height:662px; ' )
+    document.write('layer-background-image: url(images/template_internal.jpg); background-image: url(images/template_internal.jpg); background-repeat:no-repeat;' )
     document.write('} ></style>')
     document.write('<DIV id=\"pageDIV\">')
 }
@@ -360,31 +365,36 @@ if( is.min ){
     document.write(button6014.div)
     document.write(button6012.div)
     document.write(button6010.div)
+    document.write(button5241.div)
     document.write(image6023.div)
-    document.write(image11587.div)
-    document.write(image11592.div)
 }
 </script>
 
-<div id="text8897"><a name="text8897anc"></a>
-<p  legLH="1.192" style="margin-left:0px;text-indent:0px;line-height:1.192;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text8897Font1"  >&#0169; ConveGenius Edu Solutions Pvt. Ltd.
+<div id="text11671"><a name="text11671anc"></a>
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:1.156;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text11671Font1"  >Starting Alphabet
 </span ></p >
 <p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text8897Font1"  >www.convegenius.in
+<span class="text11671Font1"  >&nbsp;(Basic)
 </span ></p >
 </div>
 
-<div id="text8898"><a name="text8898anc"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text8898Font1"  >The End</span ><span class="text8898Font2" style="background-color:transparent" >
-</span ></p >
-</div>
+<script language="JavaScript">
+if( is.min ){
+    document.write(image8763.div)
+}
+</script>
 
-<div id="text8899"><a name="text8899anc"></a>
+<div id="text5237"><a name="text5237anc"></a>
 <p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:right;" >
-<span class="text8899Font1"  >Starting Alphabet (Basic)</span ><span class="text8899Font2"  > </span ><span class="text8899Font3" style="background-color:transparent" >
+<span class="text5237Font1"  >Literacy Skills
 </span ></p >
+</div>
+
+<div id="text5240"><a name="text5240anc"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text5240Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
 </div>
 
 

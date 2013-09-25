@@ -9,26 +9,68 @@
 <title>Page 1</title>
 
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
-<link rel="stylesheet" href="dialog.css" type="text/css" />
 <style text="text/css">
   body { background-color:#ffffff; }
-    span.text11511Font1 { font-size:27px; font-family:"Arial", sans-serif; color:#010101;}
-    span.text11511Font2 { font-size:27px; font-family:"Arial", sans-serif; color:#010101; font-weight:bold;}
-    span.text53Font1 { font-size:64px; font-family:"Arial", sans-serif; color:#010101;}
+    span.text10862Font1 { font-size:27px; font-family:"Century Gothic", sans-serif; color:#333333;}
+    span.text10862Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10863Font1 { font-size:21px; font-family:"Segoe UI", sans-serif; color:#ffffff;}
+    span.text10863Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10870Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10870Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10871Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10871Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10872Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10872Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
+    span.text10873Font1 { font-size:48px; font-family:"Ebrima"; color:#ffffff;}
+    span.text10873Font2 { font-size:21px; font-family:"Ebrima"; color:#010101;}
 </style>
 
 <!--[if lt IE 7]>
 <style text="text/css">
-    #image11482 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image11482 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape003_2_11489.png',sizingMethod='scale'); }
-    #image10400 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image10400 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/cat.png',sizingMethod='scale'); }
-    #image186 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image186 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape_185.png',sizingMethod='scale'); }
-    #image231 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
-    #image231 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape001_230.png',sizingMethod='scale'); }
+    #image6023 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image6023 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/purpleblue.png',sizingMethod='scale'); }
+    #image11808 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image11808 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/question.png',sizingMethod='scale'); }
+    #image12237 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image12237 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/volume.png',sizingMethod='scale'); }
+    #image10865 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10865 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/image0029.png',sizingMethod='scale'); }
+    #image10867 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10867 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/1368302077948963858baby_girl_crying-256.png',sizingMethod='scale'); }
+    #image10869 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image10869 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/13683021751423003088baby_girl_laughing-256-md.png',sizingMethod='scale'); }
+    #image11875 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image11875 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shape001_11874.png',sizingMethod='scale'); }
 </style>
 <![endif]-->
+<script type='text/javaScript' src='inc/jquery-2.0.3.min.js'></script>
+<script type='text/javaScript'>
+$(document).ready(function(){
+soundsControl.createContainer();
+});
+
+var soundsControl = {
+        author : "SP Mohanty",
+        version : "1.0",
+        description : "A sound playing framework for the convegenius app, removes the audio tag, and plays it. Will work fine when playing the audio file over low latency medium",
+        source : {'audio' : 'media/audio.mp3', 'right' : 'media/right_answer.mp3', 'wrong' : 'media/wrong_answer.mp3'}, 
+        createContainer : function(){
+                for(var handle in this.source){
+                $("body").append("<div id='CONTAINER_"+handle+"' style='display:none'></div>");
+                }
+        },
+        clearContainers : function(){
+                for(var handle in this.source){
+                $("#CONTAINER_"+handle).html('');
+                }       
+        },
+        play : function(handle) {
+                this.clearContainers(); 
+                $("#CONTAINER_"+handle).append('<audio src="'+this.source[handle]+'" type="audio/mpeg4" preload="auto" autoplay>');
+        }
+}
+
+</script>
 
 <script language = "JavaScript" src="trivantis.js"></script>
 <script language = "JavaScript" src="trivantis-timedate.js"></script>
@@ -36,12 +78,9 @@
 <script language = "JavaScript" src="trivantis-button.js"></script>
 <script language = "JavaScript" src="trivantis-image.js"></script>
 <script language = "JavaScript" src="trivantis-inline.js"></script>
-<script language = "JavaScript" src="trivantis-dialog.js"></script>
-<script language = "JavaScript" src="trivantis-strings.js"></script>
 <script language = "JavaScript">
 
 <!-- 
-trivWeb20Popups = true;
 if( !is.min )
   document.write( 'Your browser does not support dynamic html. Please download a current version of either <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a> or <a href="http://www.mozilla.com/en-US/firefox/">Mozilla Firefox </a> and try visiting our site again.  Thank You.<br /><br />' )
 
@@ -83,46 +122,71 @@ else
 function init() {
   findWH()
   if( is.min ){
-    setTimeout( "preload( 'images/startoff.gif','images/startclk.gif','images/startrol.gif','images/start001off.gif','images/start001clk.gif','images/start001rol.gif','images/shape_185.png','images/shape001_230.png','images/exit.png','images/exit-sel.png','images/home.png','images/home-sel.png','images/back.png','images/back-sel.png','images/next.png','images/next-sel.png','images/help.png','images/help-sel.png','images/cat.png','images/shape003_2_11489.png' )", 0 )
+    setTimeout( "preload( 'images/next.png','images/back.png','images/exit.png','images/exit-sel.png','images/help.png','images/help-sel.png','images/home.png','images/home-sel.png','images/back-sel.png','images/next-sel.png','images/purpleblue.png','images/1368302077948963858baby_girl_crying-256.png','images/13683021751423003088baby_girl_laughing-256-md.png','images/image0029.png','images/question.png','images/shape001_11874.png','images/volume.png','images/text10861.gif','images/text10874.gif' )", 0 )
     pageLayer = new ObjLayer( 'pageDIV' );
     ReFlow();
     pageLayer.show();
-    button10361.init()
-    button10357.init()
-    button10355.init()
-    button10353.init()
-    button10351.init()
-    button95.init()
-    button147.init()
-    button81.init()
-    button85.init()
-    button70.init()
-    image11482.init()
-    text11511.init()
-    image10400.init()
-    text53.init()
-    image186.init()
-    audio125.init()
-    audio132.init()
-    image231.init()
-    button10361.activate()
-    button10357.activate()
-    button10355.activate()
-    button10353.activate()
-    button10351.activate()
-    button95.activate()
-    button147.activate()
-    button81.activate()
-    button85.activate()
-    button70.activate()
-    image11482.activate()
-    text11511.activate()
-    image10400.activate()
-    text53.activate()
-    image186.activate()
-    audio125.activate()
-    audio132.activate()
-    image231.activate()
+    button6020.init()
+    button6018.init()
+    button6016.init()
+    button6014.init()
+    button6012.init()
+    button6010.init()
+    button10875.init()
+    button10878.init()
+    button10881.init()
+    button10884.init()
+    image6023.init()
+    audio12679.init()
+    audio12496.init()
+    audio12494.init()
+    image11808.init()
+    image12237.init()
+    text10861.init()
+    text10862.init()
+    text10863.init()
+    image10865.init()
+    image10867.init()
+    og11883.init()
+    image10869.init()
+    image11875.init()
+    text10870.init()
+    text10871.init()
+    text10872.init()
+    text10873.init()
+    text10874.init()
+    button6020.activate()
+    button6018.activate()
+    button6016.activate()
+    button6014.activate()
+    button6012.activate()
+    button6010.activate()
+    button10875.activate()
+    button10878.activate()
+    button10881.activate()
+    button10884.activate()
+    image6023.activate()
+    audio12679.activate()
+    audio12496.activate()
+    audio12494.activate()
+    image11808.activate()
+    image12237.activate()
+    text10861.activate()
+    text10862.activate()
+    text10863.activate()
+    image10865.activate()
+    image10867.activate()
+    og11883.activate()
+    image10869.activate()
+    image11875.activate()
+    text10870.activate()
+    text10871.activate()
+    text10872.activate()
+    text10873.activate()
+    text10874.activate()
+    action10859(  );
+    action10860(  );
+
     if( location.hash )
     {
       var newHash
@@ -208,282 +272,424 @@ function trivResetEntry() {
 }
 
 function playerReady(obj){
-  	if(obj['id'] == 'swfaudio125') { audio125.setFlashPlayer(); audio125.flsPlayer.addModelListener("STATE", "OnStateChange"); }
-  	if(obj['id'] == 'swfaudio125') { audio125.setFlashPlayer(); audio125.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
-  	if(obj['id'] == 'swfaudio132') { audio132.setFlashPlayer(); audio132.flsPlayer.addModelListener("STATE", "OnStateChange"); }
-  	if(obj['id'] == 'swfaudio132') { audio132.setFlashPlayer(); audio132.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
+  	if(obj['id'] == 'swfaudio12679') { audio12679.setFlashPlayer(); audio12679.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12679') { audio12679.setFlashPlayer(); audio12679.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
+  	if(obj['id'] == 'swfaudio12496') { audio12496.setFlashPlayer(); audio12496.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12496') { audio12496.setFlashPlayer(); audio12496.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
+  	if(obj['id'] == 'swfaudio12494') { audio12494.setFlashPlayer(); audio12494.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio12494') { audio12494.setFlashPlayer(); audio12494.flsPlayer.addModelListener("TIME", "OnTimeChange"); }
 }
 
 function OnStateChange(obj){
-  	if(obj['id'] == 'swfaudio125') { if( obj['newstate'] == 'PLAYING') audio125.autoPlay = true; else audio125.autoPlay = false; }
-  	if(obj['id'] == 'swfaudio132') { if( obj['newstate'] == 'PLAYING') audio132.autoPlay = true; else audio132.autoPlay = false; }
+  	if(obj['id'] == 'swfaudio12679') { if( obj['newstate'] == 'PLAYING') audio12679.autoPlay = true; else audio12679.autoPlay = false; }
+  	if(obj['id'] == 'swfaudio12496') { if( obj['newstate'] == 'PLAYING') audio12496.autoPlay = true; else audio12496.autoPlay = false; }
+  	if(obj['id'] == 'swfaudio12494') { if( obj['newstate'] == 'PLAYING') audio12494.autoPlay = true; else audio12494.autoPlay = false; }
 }
 
-function action10362(fn){
-    trivAlert( '10361', 'Quiz', 'In case of any questions, please feel free to get in touch with us.\n\nYou may e-mail us at: info@convegenius.in\n\nor call us at: 0565-2425081', fn );
+function action10859(fn){
+    button6014.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10361onUp() {
-  action10362(function(){/*TRIVDLGCALLBACKS*/});
+function action10860(fn){
+    button6016.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action10358(fn){
+function action6021(fn){
+    alert( 'In case of any questions, please feel free to get in touch with us.\n\nYou may e-mail us at: info@convegenius.in\n\nor call us at: 0565-2425081' ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button6020onUp() {
+  action6021();
+}
+
+function action6019(fn){
+    trivExitPage('http://www.convegenius.in',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button6018onUp() {
+  action6019();
+}
+
+function action6017(fn){
     trivExitPage('page_2.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10357onUp() {
-  action10358();
+function button6016onUp() {
+  action6017();
 }
 
-function action10356(fn){
+function action6015(fn){
     trivExitPage('home_page.html',false);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10355onUp() {
-  action10356();
+function button6014onUp() {
+  action6015();
 }
 
-function action10354(fn){
+function action6013(fn){
     trivExitPage('home_page.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10353onUp() {
-  action10354();
+function button6012onUp() {
+  action6013();
 }
 
-function action10352(fn){
-    {cleanupTitle('quiz'); trivExitPage('ObjLayerActionExit()',false);} 
+function action6011(fn){
+    {cleanupTitle('steel'); trivExitPage('ObjLayerActionExit()',false);} 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button10351onUp() {
-  action10352();
+function button6010onUp() {
+  action6011();
 }
 
-function action96(fn){
-    button70.actionHide(); 
+function action10876(fn){
+    image10867.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action182(fn){
-    image186.actionShow(); 
+function action12528(fn){
+    audio12496.actionPlay(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button95onUp() {
-  action96();action182();
-}
-
-function action148(fn){
-    image10400.actionShow(); 
+function action10877(fn){
+    og11883.actionHide(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button147onUp() {
-  action148();
+function button10875onUp() {
+  soundsControl.play('wrong');
+  action10876();action12528();action10877();
 }
 
-function action123(fn){
-    audio125.actionPlay(); 
+function action10879(fn){
+    image10867.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button81onUp() {
-  action123();
-}
-
-function action140(fn){
-    audio132.actionPlay(); 
+function action12517(fn){
+    audio12496.actionPlay(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action244(fn){
-    image231.actionShow(); 
+function action10880(fn){
+    og11883.actionHide(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action257(fn){
-    image186.actionHide(); 
+function button10878onUp() {
+  soundsControl.play('wrong');
+  action10879();action12517();action10880();
+}
+
+function action10882(fn){
+    og11883.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button85onUp() {
-  action140();action244();action257();
+function action12535(fn){
+    audio12494.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action10883(fn){
+    image10867.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button10881onUp() {
+soundsControl.play('right');
+action10882();action12535();action10883();
+}
+
+function action10885(fn){
+    audio12496.actionPlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action10886(fn){
+    og11883.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button10884onUp() {
+soundsControl.play('wrong');
+  action10885();action10886();
+}
+
+function action12698(fn){
+    audio12679.actionTogglePlay(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function image12237onUp() {
+ soundsControl.play('audio');
+  action12698();
 }
 
 if( is.min ){
-button10361 = new ObjButton('button10361','help',884,24,48,45,1,28,'div')
-button10361.setImages('images/help.png','images/help-sel.png','images/help-sel.png')
-button10361.onUp = button10361onUp
-button10361.hasOnUp = true
-button10361.capture=4
-button10361.build()
+button6020 = new ObjButton('button6020',null,884,24,48,45,1,39,'div')
+button6020.setImages('images/help.png','images/help-sel.png','images/help-sel.png')
+button6020.onUp = button6020onUp
+button6020.hasOnUp = true
+button6020.capture=4
+button6020.build()
 
-button10357 = new ObjButton('button10357','next',536,610,62,40,1,29,'div')
-button10357.setImages('images/next.png','images/next-sel.png','images/next-sel.png')
-button10357.onUp = button10357onUp
-button10357.hasOnUp = true
-button10357.capture=4
-button10357.build()
+button6018 = new ObjButton('button6018',null,7,6,249,44,1,40,'div')
+button6018.setImages('transbtn.gif',null,null,'images/')
+button6018.onUp = button6018onUp
+button6018.hasOnUp = true
+button6018.capture=4
+button6018.build()
 
-button10355 = new ObjButton('button10355','back',448,610,62,40,1,30,'div')
-button10355.setImages('images/back.png','images/back-sel.png','images/back-sel.png')
-button10355.onUp = button10355onUp
-button10355.hasOnUp = true
-button10355.capture=4
-button10355.build()
+button6016 = new ObjButton('button6016',null,536,610,62,40,0,41,'div')
+button6016.setImages('images/next.png','images/next-sel.png','images/next-sel.png')
+button6016.onUp = button6016onUp
+button6016.hasOnUp = true
+button6016.capture=4
+button6016.build()
 
-button10353 = new ObjButton('button10353','home',824,24,50,46,1,31,'div')
-button10353.setImages('images/home.png','images/home-sel.png','images/home-sel.png')
-button10353.onUp = button10353onUp
-button10353.hasOnUp = true
-button10353.capture=4
-button10353.build()
+button6014 = new ObjButton('button6014',null,448,610,62,40,0,42,'div')
+button6014.setImages('images/back.png','images/back-sel.png','images/back-sel.png')
+button6014.onUp = button6014onUp
+button6014.hasOnUp = true
+button6014.capture=4
+button6014.build()
 
-button10351 = new ObjButton('button10351','exit',940,24,53,45,1,32,'div')
-button10351.setImages('images/exit.png',null,'images/exit-sel.png')
-button10351.onUp = button10351onUp
-button10351.hasOnUp = true
-button10351.capture=4
-button10351.build()
+button6012 = new ObjButton('button6012',null,824,24,50,46,1,43,'div')
+button6012.setImages('images/home.png','images/home-sel.png','images/home-sel.png')
+button6012.onUp = button6012onUp
+button6012.hasOnUp = true
+button6012.capture=4
+button6012.build()
 
-button95 = new ObjButton('button95','Start',159,421,76,60,1,33,'div')
-button95.setImages('images/startoff.gif','images/startclk.gif','images/startrol.gif')
-button95.onUp = button95onUp
-button95.hasOnUp = true
-button95.capture=4
-button95.build()
+button6010 = new ObjButton('button6010',null,940,24,53,45,1,44,'div')
+button6010.setImages('images/exit.png',null,'images/exit-sel.png')
+button6010.onUp = button6010onUp
+button6010.hasOnUp = true
+button6010.capture=4
+button6010.build()
 
-button147 = new ObjButton('button147','Start',142,321,104,60,1,34,'div')
-button147.setImages('images/start001off.gif','images/start001clk.gif','images/start001rol.gif')
-button147.onUp = button147onUp
-button147.hasOnUp = true
-button147.capture=4
-button147.build()
+button10875 = new ObjButton('button10875',null,797,384,96,100,1,45,'div')
+button10875.setImages('transbtn.gif',null,null,'images/')
+button10875.onUp = button10875onUp
+button10875.hasOnUp = true
+button10875.capture=4
+button10875.build()
 
-button81 = new ObjButton('button81','Button wrong',413,110,500,419,1,35,'div')
-button81.setImages('transbtn.gif',null,null,'images/')
-button81.onUp = button81onUp
-button81.hasOnUp = true
-button81.capture=4
-button81.build()
+button10878 = new ObjButton('button10878',null,797,144,96,100,1,46,'div')
+button10878.setImages('transbtn.gif',null,null,'images/')
+button10878.onUp = button10878onUp
+button10878.hasOnUp = true
+button10878.capture=4
+button10878.build()
 
-button85 = new ObjButton('button85','Button right',450,283,144,84,1,36,'div')
-button85.setImages('transbtn.gif',null,null,'images/')
-button85.onUp = button85onUp
-button85.hasOnUp = true
-button85.capture=4
-button85.build()
+button10881 = new ObjButton('button10881',null,797,504,96,100,1,47,'div')
+button10881.setImages('transbtn.gif',null,null,'images/')
+button10881.onUp = button10881onUp
+button10881.hasOnUp = true
+button10881.capture=4
+button10881.build()
 
-button70 = new ObjButton('button70','Button go',440,136,394,369,1,37,'div')
-button70.setImages('transbtn.gif',null,null,'images/')
-button70.build()
+button10884 = new ObjButton('button10884',null,797,264,96,100,1,48,'div')
+button10884.setImages('transbtn.gif',null,null,'images/')
+button10884.onUp = button10884onUp
+button10884.hasOnUp = true
+button10884.capture=4
+button10884.build()
 
-image11482 = new ObjImage('image11482','images/shape003_2_11489.png','Line',380,108,4,520,1,10,'div')
-image11482.build()
+image6023 = new ObjImage('image6023','images/purpleblue.png',null,0,0,1009,86,1,10,'div')
+image6023.build()
 
-text11511 = new ObjInline('text11511',null,39,147,319,116,1,11,null,'div')
-text11511.build()
-
-image10400 = new ObjImage('image10400','images/cat.png','cat',439,175,425,300,0,12,'div')
-image10400.build()
-
-text53 = new ObjInline('text53',null,70,32,448,98,1,13,null,'div')
-text53.build()
-
-image186 = new ObjImage('image186','images/shape_185.png','Rectangle',440,133,400,389,0,14,'div')
-image186.build()
-
-audio125 = new ObjInline('audio125','Buzzer Sounds',354,321,1,1,1,15,0,'div');
-audio125.iType='flashvid';
-audio125
+audio12679 = new ObjInline('audio12679',null,354,321,1,1,1,11,0,'div');
+audio12679.iType='flashvid';
+audio12679
 if (is.useHTML5Video()) {
-audio125.addParm( "<audio src='media/buzzer_sounds.mp3' width='1px' height='1px' id='html5audio125' name='html5audio125' class=''></audio>")
+audio12679.addParm( "<audio src='media/audio.mp3' width='1px' height='1px' id='html5audio12679' name='html5audio12679' class=''></audio>")
 }else{
 if (is.Mac) {
-audio125.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio125' name='swfaudio125'>" )
+audio12679.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12679' name='swfaudio12679'>" )
 }
 else{
-audio125.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio125' id='swfaudio125'>" )
+audio12679.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12679' id='swfaudio12679'>" )
 }
-audio125.addParm( "<param name='movie' value='media/player.swf'>" )
-audio125.addParm( "<param name='wmode' value='transparent'>" )
-audio125.addParm( "<param name='allowScriptAccess' value='always'>" )
-audio125.addParm( "<param name='FlashVars' value='file=media/buzzer_sounds.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12679.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12679.addParm( "<param name='wmode' value='transparent'>" )
+audio12679.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12679.addParm( "<param name='FlashVars' value='file=media/audio.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
 if (!is.Mac) {
-audio125.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio125' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/buzzer_sounds.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
-audio125.addParm( "</embed> </object>" )
+audio12679.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12679' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/audio.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12679.addParm( "</embed> </object>" )
 }
 else {
-audio125.addParm( "</object>" )
+audio12679.addParm( "</object>" )
 }
 }
-audio125.build()
+audio12679.build()
 
-audio132 = new ObjInline('audio132','applause-8',202,22,1,1,1,16,0,'div');
-audio132.iType='flashvid';
-audio132
+audio12496 = new ObjInline('audio12496',null,372,545,1,1,1,12,0,'div');
+audio12496.iType='flashvid';
+audio12496
 if (is.useHTML5Video()) {
-audio132.addParm( "<audio src='media/applause-8.mp3' width='1px' height='1px' id='html5audio132' name='html5audio132' class=''></audio>")
+audio12496.addParm( "<audio src='media/wrong_answer.mp3' width='1px' height='1px' id='html5audio12496' name='html5audio12496' class=''></audio>")
 }else{
 if (is.Mac) {
-audio132.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio132' name='swfaudio132'>" )
+audio12496.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12496' name='swfaudio12496'>" )
 }
 else{
-audio132.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio132' id='swfaudio132'>" )
+audio12496.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12496' id='swfaudio12496'>" )
 }
-audio132.addParm( "<param name='movie' value='media/player.swf'>" )
-audio132.addParm( "<param name='wmode' value='transparent'>" )
-audio132.addParm( "<param name='allowScriptAccess' value='always'>" )
-audio132.addParm( "<param name='FlashVars' value='file=media/applause-8.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12496.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12496.addParm( "<param name='wmode' value='transparent'>" )
+audio12496.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12496.addParm( "<param name='FlashVars' value='file=media/wrong_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
 if (!is.Mac) {
-audio132.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio132' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/applause-8.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
-audio132.addParm( "</embed> </object>" )
+audio12496.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12496' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/wrong_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12496.addParm( "</embed> </object>" )
 }
 else {
-audio132.addParm( "</object>" )
+audio12496.addParm( "</object>" )
 }
 }
-audio132.build()
+audio12496.build()
 
-image231 = new ObjImage('image231','images/shape001_230.png','Ring',446,286,152,83,0,17,'div')
-image231.build()
+audio12494 = new ObjInline('audio12494',null,377,437,1,1,1,13,0,'div');
+audio12494.iType='flashvid';
+audio12494
+if (is.useHTML5Video()) {
+audio12494.addParm( "<audio src='media/right_answer.mp3' width='1px' height='1px' id='html5audio12494' name='html5audio12494' class=''></audio>")
+}else{
+if (is.Mac) {
+audio12494.addParm( "<object type='application/x-shockwave-flash' data='media/player.swf' width='1' height='1' id='swfaudio12494' name='swfaudio12494'>" )
+}
+else{
+audio12494.addParm( "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0' width='1' height='1' name='swfaudio12494' id='swfaudio12494'>" )
+}
+audio12494.addParm( "<param name='movie' value='media/player.swf'>" )
+audio12494.addParm( "<param name='wmode' value='transparent'>" )
+audio12494.addParm( "<param name='allowScriptAccess' value='always'>" )
+audio12494.addParm( "<param name='FlashVars' value='file=media/right_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+if (!is.Mac) {
+audio12494.addParm( "<embed src='media/player.swf' width='1' height='1' type='application/x-shockwave-flash' pluginspage='//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash' name='swfaudio12494' swLiveConnect='true' wmode='opaque' allowScriptAccess='always' FlashVars='file=media/right_answer.mp3&fullscreen=true&stretching=exactfit&displayclick=none&width=1&height=1&icons=false'>" )
+audio12494.addParm( "</embed> </object>" )
+}
+else {
+audio12494.addParm( "</object>" )
+}
+}
+audio12494.build()
+
+image11808 = new ObjImage('image11808','images/question.png',null,40,108,40,40,1,14,'div')
+image11808.build()
+
+image12237 = new ObjImage('image12237','images/volume.png',null,935,100,50,50,1,15,'div')
+image12237.onUp = image12237onUp
+image12237.hasOnUp = true
+image12237.capture=4
+image12237.build()
+
+text10861 = new ObjImage('text10861','images/text10861.gif',null,92,104,646,53,1,16,'div')
+text10861.build()
+
+text10862 = new ObjInline('text10862',null,265,8,522,36,1,17,null,'div')
+text10862.build()
+
+text10863 = new ObjInline('text10863',null,64,50,725,37,1,18,null,'div')
+text10863.build()
+
+image10865 = new ObjImage('image10865','images/image0029.png',null,60,196,236,194,1,19,'div')
+image10865.build()
+
+image10867 = new ObjImage('image10867','images/1368302077948963858baby_girl_crying-256.png',null,392,218,290,290,0,20,'div')
+image10867.build()
+
+og11883 = new ObjInline('og11883',null,0,0,993,676,1,0)
+og11883.isGrp = true
+og11883.addChild('image10869')
+og11883.addChild('image11875')
+og11883.build()
+
+image10869 = new ObjImage('image10869','images/13683021751423003088baby_girl_laughing-256-md.png',null,381,212,300,300,0,21,'div')
+image10869.build()
+
+image11875 = new ObjImage('image11875','images/shape001_11874.png',null,783,495,120,120,0,22,'div')
+image11875.build()
+
+text10870 = new ObjInline('text10870',null,793,384,100,100,1,23,'#674ea7','div')
+text10870.build()
+
+text10871 = new ObjInline('text10871',null,793,144,100,100,1,24,'#674ea7','div')
+text10871.build()
+
+text10872 = new ObjInline('text10872',null,793,504,100,100,1,25,'#674ea7','div')
+text10872.build()
+
+text10873 = new ObjInline('text10873',null,793,264,100,100,1,26,'#674ea7','div')
+text10873.build()
+
+text10874 = new ObjImage('text10874','images/text10874.gif',null,94,406,210,72,1,27,'div')
+text10874.build()
 
 
 
 writeStyleSheets(
-    button10361.css+
-    button10357.css+
-    button10355.css+
-    button10353.css+
-    button10351.css+
-    button95.css+
-    button147.css+
-    button81.css+
-    button85.css+
-    button70.css+
-    image11482.css+
-    text11511.css+
-    image10400.css+
-    text53.css+
-    image186.css+
-    audio125.css+
-    audio132.css+
-    image231.css
+    button6020.css+
+    button6018.css+
+    button6016.css+
+    button6014.css+
+    button6012.css+
+    button6010.css+
+    button10875.css+
+    button10878.css+
+    button10881.css+
+    button10884.css+
+    image6023.css+
+    audio12679.css+
+    audio12496.css+
+    audio12494.css+
+    image11808.css+
+    image12237.css+
+    text10861.css+
+    text10862.css+
+    text10863.css+
+    image10865.css+
+    image10867.css+
+    og11883.css+
+    image10869.css+
+    image11875.css+
+    text10870.css+
+    text10871.css+
+    text10872.css+
+    text10873.css+
+    text10874.css
     )
 }
 // -->
@@ -498,7 +704,7 @@ if( is.min ){
     findWH()
     var left = (winW > 1009) ? (winW-1009)/2 : 0
     document.write('<style text="text/css">#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:1009px; height:662px; ' )
-    document.write('layer-background-image: url(images/image_4_9468.jpg); background-image: url(images/image_4_9468.jpg); background-repeat:repeat-x;' )
+    document.write('layer-background-image: url(images/template_copy.jpg); background-image: url(images/template_copy.jpg); background-repeat:no-repeat;' )
     document.write('} ></style>')
     document.write('<DIV id=\"pageDIV\">')
 }
@@ -506,46 +712,132 @@ if( is.min ){
 
 <script language="JavaScript">
 if( is.min ){
-    document.write(button10361.div)
-    document.write(button10357.div)
-    document.write(button10355.div)
-    document.write(button10353.div)
-    document.write(button10351.div)
-    document.write(button95.div)
-    document.write(button147.div)
-    document.write(button81.div)
-    document.write(button85.div)
-    document.write(button70.div)
-    document.write(image11482.div)
+    document.write(button6020.div)
+    document.write(button6018.div)
+    document.write(button6016.div)
+    document.write(button6014.div)
+    document.write(button6012.div)
+    document.write(button6010.div)
+    document.write(button10875.div)
+    document.write(button10878.div)
+    document.write(button10881.div)
+    document.write(button10884.div)
+    document.write(image6023.div)
+    document.write(audio12679.div)
+    document.write(audio12496.div)
+    document.write(audio12494.div)
+    document.write(image11808.div)
+    document.write(image12237.div)
+    document.write(text10861.div)
 }
 </script>
 
-<div id="text11511"><a name="text11511anc"></a>
-<p  legLH="1.149" style="margin-left:0px;text-indent:0px;line-height:1.149;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text11511Font1"  >Click on the </span ><span class="text11511Font2"  >Check </span ><span class="text11511Font1"  >button 
-to see the cat and then 
-click the </span ><span class="text11511Font2"  >Play </span ><span class="text11511Font1"  >button
+<div id="text10862"><a name="text10862anc"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:right;" >
+<span class="text10862Font1"  >Starting Alphabet (Basic)</span ><span class="text10862Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text10863"><a name="text10863anc"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text10863Font1"  >Learning Activity</span ><span class="text10863Font2" style="background-color:transparent" >
 </span ></p >
 </div>
 
 <script language="JavaScript">
 if( is.min ){
-    document.write(image10400.div)
+    document.write(image10865.div)
+    document.write(image10867.div)
 }
 </script>
 
-<div id="text53"><a name="text53anc"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text53Font1"  >Touch the Tail
+<div id="og11883"><a name="og11883anc"></a></div>
+<script language="JavaScript">
+if( is.min ){
+    document.write(image10869.div)
+    document.write(image11875.div)
+}
+</script>
+
+<div id="text10870"><a name="text10870anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10870ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10870Font1"  >D</span ><span class="text10870Font2" style="background-color:transparent" >
 </span ></p >
-</div>
+<!--split=text10870ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10871"><a name="text10871anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10871ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10871Font1"  >O</span ><span class="text10871Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10871ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10872"><a name="text10872anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10872ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10872Font1"  >C</span ><span class="text10872Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10872ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
+
+<div id="text10873"><a name="text10873anc"></a>
+<table cellpadding=0 cellspacing=0 width='100%'  height='100%' bgcolor='#674ea7'>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td width=2 bgcolor='#385d8a'></td>
+<td width=4></td>
+<td height='*' valign='top' width=*><div style='height:88px; overflow:hidden'><!--split=text10873ter--><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text10873Font1"  >I</span ><span class="text10873Font2" style="background-color:transparent" >
+</span ></p >
+<!--split=text10873ter--></div></td><td width=4></td>
+<td width=2 bgcolor='#385d8a'></td>
+</tr><tr><td width=2 bgcolor='#385d8a'></td>
+<td colspan=3 height=4></td><td width=2 bgcolor='#385d8a'></td>
+</tr>
+<tr><td colspan=5 height=2 width='*' bgcolor='#385d8a'></td></tr>
+</table></div>
 
 <script language="JavaScript">
 if( is.min ){
-    document.write(image186.div)
-    document.write(audio125.div)
-    document.write(audio132.div)
-    document.write(image231.div)
+    document.write(text10874.div)
     document.write("</DIV>")
 }
 </script>
