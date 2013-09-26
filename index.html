@@ -2,7 +2,6 @@
 
 <head>
 <script type='text/javaScript' src='inc/jquery-2.0.3.min.js'></script>
-<script type='text/javaScript' src='inc/jquery.mb.audio.js'></script>
 <script type='text/javaScript'>
 
 $(document).ready(function(){
@@ -26,7 +25,7 @@ var soundsControl = {
 	author : "SP Mohanty",
 	version : "1.0",
 	description : "A sound playing framework for the convegenius app, removes the audio tag, and plays it. Will work fine when playing the audio file over low latency medium",
-	source : {'audio' : 'media/audio.mp3', 'right' : 'media/right_answer.mp3', 'wrong' : 'media/wrong_answer.mp3'}, 
+	source : {'audio' : 'http://10.4.2.133/jquery/jairajsir/media/audio.mp3', 'right' : 'http://10.4.2.133/jquery/jairajsir/media/right_answer.mp3', 'wrong' : 'http://10.4.2.133/jquery/jairajsir/media/wrong_answer.mp3'}, 
 	createContainer : function(){
 		for(var handle in this.source){
 		$("body").append("<div id='CONTAINER_"+handle+"' style='display:none'></div>");
